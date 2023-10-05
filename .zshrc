@@ -74,8 +74,8 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-cp .vimrc .config/.vimrc
-cp .zshrc .config/.zshrc
+cp ~/.vimrc ~/.config/.vimrc
+cp ~/.zshrc ~/.config/.zshrc
 
 # User configuration
 
@@ -101,7 +101,15 @@ cp .zshrc .config/.zshrc
 #     fi
 # }
 
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+code() { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+search_man() {
+    man $1 | grep -- $2
+}
+
+fd() {
+    la . | grep -- $1
+}
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -116,5 +124,9 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cl='clear'
 alias gg='git clone'
+alias -g gp="grep"
+alias -g hist="history"
 
 alias rc='source ~/.zshrc'
+alias hpc="ssh 'vsc44253@login.hpc.ugent.be'"
+alias hpcftp='sftp vsc44253@login.hpc.ugent.be'
