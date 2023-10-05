@@ -133,6 +133,6 @@ alias hpcftp='sftp vsc44253@login.hpc.ugent.be'
 
 
 ### hpc alias
-alias cd_mydata="cd /data/gent/442/vsc44253"
-alias cd_data="cd /data/gent/vo/000/gvo00074/vsc44253"
-alias cd_scratch="cd /scratch/gent/vo/000/gvo00074/vsc44253"
+alias cdmydata="cd /data/gent/442/vsc44253"
+alias cddata="cd /data/gent/vo/000/gvo00074/vsc44253"
+alias cdscratch="cd /scratch/gent/vo/000/gvo00074/vsc44253"
