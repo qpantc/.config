@@ -128,5 +128,11 @@ alias -g gp="grep"
 alias -g hist="history"
 
 alias rc='source ~/.zshrc'
-alias hpc="ssh 'vsc44253@login.hpc.ugent.be'"
+alias hpc='ssh vsc44253@login.hpc.ugent.be'
 alias hpcftp='sftp vsc44253@login.hpc.ugent.be'
+
+
+### hpc alias
+alias cd_mydata="cd /data/gent/442/vsc44253"
+alias cd_data="cd /data/gent/vo/000/gvo00074/vsc44253"
+alias cd_scratch="cd /scratch/gent/vo/000/gvo00074/vsc44253"
