@@ -19,7 +19,7 @@ set shiftwidth=2
 set softtabstop=2
 set list
 set listchars=tab:▸\ ,trail:▫
-set scrolloff=5
+set scrolloff=7
 
 " Searching options
 set hlsearch
@@ -67,23 +67,3 @@ map <LEADER>l <C-W>l
 map <LEADER>i <C-W>k
 map <LEADER>j <C-W>h
 map <LEADER>k <C-W>j
-
-" ===
-" === Dress up my vim
-" ===
-map <LEADER>c1 :set background=dark<CR>:colorscheme snazzy<CR>:AirlineTheme dracula<CR>
-map <LEADER>c2 :set background=light<CR>:colorscheme ayu<CR>:AirlineTheme ayu_light<CR>
-
-set termguicolors     " enable true colors support
-let ayucolor="light"  " for light version of theme
-" let ayucolor="mirage" " for mirage version of theme
-" let ayucolor="dark"   " for dark version of theme
-let g:SnazzyTransparent = 1
-let g:airline_theme='dracula'
-
-let g:lightline = {
-  \     'active': {
-  \         'left': [['mode', 'paste' ], ['readonly', 'filename', 'modified']],
-  \         'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding']]
-  \     }
-  \ }
