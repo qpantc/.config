@@ -130,7 +130,7 @@ alias -g hist="history"
 
 alias rc='source ~/.zshrc'
 alias hpc="ssh 'vsc44253@login.hpc.ugent.be'"
-alias hpcftp='sftp vsc44253@login.hpc.ugent.be'
+alias hpcsftp='sftp vsc44253@login.hpc.ugent.be'
 
 ### hpc alias
 alias cdmydata="cd /data/gent/442/vsc44253"
@@ -139,3 +139,4 @@ alias cdscratch="cd /scratch/gent/vo/000/gvo00074/vsc44253"
 alias doduo="module swap cluster/doduo"
 alias swalot="module swap cluster/swalot"
 alias victini="module swap cluster/victini"
+alias R="ml purge; ml R-bundle-Bioconductor/3.15-foss-2021b-R-4.2.0"
