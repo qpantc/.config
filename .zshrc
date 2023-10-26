@@ -112,6 +112,17 @@ fd() {
     la . | grep -- $1
 }
 
+
+ftp(){
+ if [[ $1 == 'hpc' ]]; then
+    sftp vsc44253@login.hpc.ugent.be
+ elif [[ $1 == 'bj' ]]; then
+    sftp m6s000377@ZC-M6@ssh.cn-hongkong-1.paracloud.com
+ else
+   echo "Unknown HPC"
+ fi
+}
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -128,9 +139,18 @@ alias gg='git clone'
 alias -g gp="grep"
 alias -g hist="history"
 
+# alias for make
+alias mk='make'
+alias mc='make clean'
+
 alias rc='source ~/.zshrc'
 alias hpc="ssh 'vsc44253@login.hpc.ugent.be'"
-alias hpcsftp='sftp vsc44253@login.hpc.ugent.be'
+# alias hpcsftp='sftp vsc44253@login.hpc.ugent.be'
+alias r="/Library/Frameworks/R.framework/Resources/bin/R"
+
+alias bj='ssh m6s000377@ZC-M6@ssh.cn-hongkong-1.paracloud.com -p 22' 
+# alias bjsftp='sftp m6s000377@ZC-M6@ssh.cn-hongkong-1.paracloud.com'
+alias mini='ssh tianchens-mac-mini.local'
 
 ### hpc alias
 alias cdmydata="cd /data/gent/442/vsc44253"
@@ -140,3 +160,5 @@ alias doduo="module swap cluster/doduo"
 alias swalot="module swap cluster/swalot"
 alias victini="module swap cluster/victini"
 alias R="ml purge; ml R-bundle-Bioconductor/3.15-foss-2021b-R-4.2.0"
+
+### Beijing HPC alias
