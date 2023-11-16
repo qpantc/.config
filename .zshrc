@@ -118,6 +118,8 @@ ftp(){
     sftp vsc44253@login.hpc.ugent.be
  elif [[ $1 == 'bj' ]]; then
     sftp m6s000377@ZC-M6@ssh.cn-hongkong-1.paracloud.com
+ elif [[ $1 == 'cavelab' ]]; then
+    sftp quan@cave012.ugent.be
  else
    echo "Unknown HPC"
  fi
@@ -142,6 +144,7 @@ alias -g hist="history"
 # alias for make
 alias mk='make'
 alias mc='make clean'
+alias main='./main'
 
 alias rc='source ~/.zshrc'
 alias hpc="ssh 'vsc44253@login.hpc.ugent.be'"
@@ -150,7 +153,8 @@ alias r="/Library/Frameworks/R.framework/Resources/bin/R"
 
 alias bj='ssh m6s000377@ZC-M6@ssh.cn-hongkong-1.paracloud.com -p 22' 
 # alias bjsftp='sftp m6s000377@ZC-M6@ssh.cn-hongkong-1.paracloud.com'
-alias mini='ssh tianchens-mac-mini.local'
+alias mini='ssh Tianchen@tianchens-mac-mini.local'
+alias cavelab='ssh -p 2225 quan@cave012.ugent.be'
 
 ### hpc alias
 alias cdmydata="cd /data/gent/442/vsc44253"
