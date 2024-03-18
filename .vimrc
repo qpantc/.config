@@ -9,6 +9,8 @@ set cursorline
 syntax enable
 syntax on
 
+colorscheme desert
+
 " ===
 " === Editor behavior
 " ===
@@ -18,7 +20,6 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set list
-set listchars=tab:▸\ ,trail:▫
 set scrolloff=7
 
 " Searching options
